@@ -1,5 +1,6 @@
 Social::Application.routes.draw do
 
+  match '/how_this_works' => "main#how_this_works", via: :get
   root 'main#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
