@@ -1,0 +1,26 @@
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: social_dev
+  pool: 5
+  username: tablepin
+  password: test
+  host:     localhost
+  port:     5432
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: social_test
+  pool: 5
+  username: social
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: social_production
+  pool: 5
+  username: social
+  password:
