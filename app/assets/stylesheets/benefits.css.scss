@@ -5,5 +5,10 @@
 .benefits {
   li {
     margin: 25px 0;
+    margin-right: 7px;
+
+    &:hover {
+      background-color: #EFEFEF;
+    }
   }
 }

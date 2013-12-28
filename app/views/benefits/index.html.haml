@@ -1,20 +1,36 @@
 .row
-  .large12.columns
+  .large-12.columns{style: 'padding: 19px 0px 0px 0px;'}
     %h2 Государственная помощь
     %p Список государственных помощей. Дргуая полезная информация
 .row
-  .large12.columns{style: 'margin: 18px 0px;'}
+  .large-12.columns{style: 'margin: 18px 0px; background-color: #eeeeee; padding-top: 18px;'}
     = link_to 'Создать помощь', new_benefit_path, class: 'button'
 
 .benefits
   .row
-    .large12.columns{style: 'margin: 18px 0px;'}
-      %ul{style: 'list-style: none; margin: 0 0;'}
+    .large-12.columns{style: 'margin: 18px 0px;'}
+      %dl.sub-nav
+        %dd.active
+          %a{href: '#'} Все
+        %dd
+          %a{href: '#'} Скидка
+        %dd
+          %a{href: '#'} Льгота
+
+      %ul.small-block-grid-3{style: 'list-style: none; margin: 0 0;'}
         %li
-          %h3 Афганець учасник бойових дій
+          = link_to '/benefits/1' do
+            %div
+              %span скидка
+            %h4 Плата   за  користування  житлом (квартирна плата)
+            %h3 75%
         %li
-          %h3 Одинока мати
+          %div
+            %span скидка
+          %h4 Плата   за  користування комунальними послугами
+          %h3 75%
         %li
-          %h3 Инвалід 2-й категорії
-        %li
-          %h3 Инвалід 1-й категорії
+          %div
+            %span скидка
+          %h4 Вартость палива
+          %h3 75%
