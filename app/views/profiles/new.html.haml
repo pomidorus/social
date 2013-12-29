@@ -10,4 +10,5 @@
           = simple_form_for @profile do |f|
             %label Название
             = f.text_field :title
+            = f.association :benefits
             = f.button :submit, 'Создать'

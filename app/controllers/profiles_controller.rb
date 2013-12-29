@@ -4,6 +4,7 @@ class ProfilesController < ApplicationController
   end
 
   def show
+    @profile = Profile.find(params[:id])
   end
 
   def edit
@@ -14,6 +15,11 @@ class ProfilesController < ApplicationController
 
   def create
     @profile = Profile.new profile_params
+    benefits = []
+    params[:profile]['benefit_ids'].each do |benefit|
+      benefits << Benefit.find(benefit) unless benefit.blank?
+    end
+    @profile.benefits = benefits
     @profile.save!
   end
 
@@ -26,6 +32,6 @@ class ProfilesController < ApplicationController
 
   private
   def profile_params
-    params.require(:profile).permit(:title)
+    params.require(:profile).permit(:title, :benefit_ids)
   end
 end
