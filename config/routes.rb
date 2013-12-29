@@ -4,6 +4,8 @@ Social::Application.routes.draw do
   resources :profiles
 
   match '/how_this_works' => "main#how_this_works", via: :get
+  match '/search_by_category/:id' => "main#search_by_category", via: :get, as: :search_by_category
+
   root 'main#index'
 
   # Example of regular route:

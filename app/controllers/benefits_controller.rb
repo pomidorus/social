@@ -3,6 +3,7 @@ class BenefitsController < ApplicationController
   end
 
   def show
+    @benefit = Benefit.find(params[:id])
   end
 
   def edit
