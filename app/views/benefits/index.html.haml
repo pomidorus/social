@@ -1,7 +1,7 @@
 .row
   .large-12.columns{style: 'padding: 19px 0px 0px 0px;'}
-    %h2 Государственная помощь
-    %p Список государственных помощей. Другая полезная информация
+    %h2 Социальная помощь
+    %p Список социальных помощей
 .row
   .large-12.columns{style: 'margin: 18px 0px; background-color: #eeeeee; padding-top: 18px;'}
     = link_to 'Создать помощь', new_benefit_path, class: 'button'
@@ -13,9 +13,15 @@
         %dd.active
           %a{href: '#'} Все
         %dd
+          %a{href: '#'} Компенсация
+        %dd
+          %a{href: '#'} Льготы
+        %dd
           %a{href: '#'} Скидка
         %dd
-          %a{href: '#'} Льгота
+          %a{href: '#'} Социальная помощь
+        %dd
+          %a{href: '#'} Субсидия
 
       %ul.small-block-grid-3{style: 'list-style: none; margin: 0 0;'}
         %li
