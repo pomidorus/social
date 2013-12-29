@@ -1,0 +1,19 @@
+        Prefix Verb   URI Pattern                  Controller#Action
+      benefits GET    /benefits(.:format)          benefits#index
+               POST   /benefits(.:format)          benefits#create
+   new_benefit GET    /benefits/new(.:format)      benefits#new
+  edit_benefit GET    /benefits/:id/edit(.:format) benefits#edit
+       benefit GET    /benefits/:id(.:format)      benefits#show
+               PATCH  /benefits/:id(.:format)      benefits#update
+               PUT    /benefits/:id(.:format)      benefits#update
+               DELETE /benefits/:id(.:format)      benefits#destroy
+      profiles GET    /profiles(.:format)          profiles#index
+               POST   /profiles(.:format)          profiles#create
+   new_profile GET    /profiles/new(.:format)      profiles#new
+  edit_profile GET    /profiles/:id/edit(.:format) profiles#edit
+       profile GET    /profiles/:id(.:format)      profiles#show
+               PATCH  /profiles/:id(.:format)      profiles#update
+               PUT    /profiles/:id(.:format)      profiles#update
+               DELETE /profiles/:id(.:format)      profiles#destroy
+how_this_works GET    /how_this_works(.:format)    main#how_this_works
+          root GET    /                            main#index
