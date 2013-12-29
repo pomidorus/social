@@ -1,2 +1,8 @@
-%h1 Benefits#create
-%p Find me in app/views/benefits/create.html.haml
+.benefit-profile
+  .row
+    .large-12.columns
+      %div{style: 'padding: 16px 0px;'}
+        = link_to "&larr; вернуться к списку социальных помощей".html_safe, benefits_path
+      %h2= "Социальная помощь #{link_to @benefit.title, benefit_path(@benefit)} успешно создана".html_safe
+      %p{style: 'margin-top: 20px;'}
+        = link_to 'создать новую социальную помощь', new_benefit_path

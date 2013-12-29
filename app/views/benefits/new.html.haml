@@ -8,6 +8,9 @@
       .row
         .large-8.columns
           = simple_form_for @benefit do |f|
+            .row
+              .large-4.columns
+                = f.association :benefit_category
             = f.input :title, label: 'Название'
             = f.input :description, label: "Описание"
             = f.button :submit, 'Создать'

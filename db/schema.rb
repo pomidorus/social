@@ -11,17 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131229050424) do
+ActiveRecord::Schema.define(version: 20131229115715) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "benefit_categories", force: true do |t|
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "benefits", force: true do |t|
     t.string   "title"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "benefit_category_id"
   end
+
+  add_index "benefits", ["benefit_category_id"], name: "index_benefits_on_benefit_category_id", using: :btree
 
   create_table "profiles", force: true do |t|
     t.string   "title"
