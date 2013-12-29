@@ -1,4 +1,3 @@
-
 development:
   adapter: postgresql
   encoding: unicode
@@ -9,6 +8,7 @@ development:
   host:     localhost
   port:     5432
 
+
 test:
   adapter: postgresql
   encoding: unicode
@@ -16,6 +16,7 @@ test:
   pool: 5
   username: social
   password:
+
 
 production:
   adapter: postgresql
