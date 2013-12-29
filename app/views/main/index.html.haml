@@ -5,15 +5,15 @@
       %form{style: 'padding: 0px 0px 0px 0px;'}
         .row
           .large-8.columns{style: 'margin-top: 20px;'}
-            %label{style: 'font-size: 18px'} я имею статус
-            .row{style: 'margin-top: 25px;'}
-              .large-10.columns
-                %input{type: "text"}
-              .large-2.columns
-                %div{style: 'padding-top: 7px;'}
-                  %a{href: '', style: 'text-decoration: underline;'} весь список
+            %h4{} я имею статус
             %ul.inline-list{style: 'font-size: 19px; line-height: 2em;'}
               - @profiles.each do |profile|
                 = render profile
-            %p Мне интересны льготы и субсидии в Киеве
-            .button Найти
+
+  .row
+    .large-5.columns{style: 'margin: 20px 0px;'}
+      %h4 я не знаю свой статус
+      %form{style: 'margin: 20px 0; padding: 10px 15px; background-color: #eeeeee;'}
+        %label Площадь жилья, кв.м
+        %input{type: 'text'}
+        .button Найти
