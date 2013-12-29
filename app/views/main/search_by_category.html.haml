@@ -1,6 +1,22 @@
 .row
   .large-12.columns
     %h1= @profile.title
+    .row
+      .large-12.columns{style: 'margin: 18px 0px;'}
+        %dl.sub-nav
+          %dd.active
+            %a{href: '#'} Все
+          %dd
+            %a{href: '#'} Компенсация
+          %dd
+            %a{href: '#'} Льготы
+          %dd
+            %a{href: '#'} Скидка
+          %dd
+            %a{href: '#'} Социальная помощь
+          %dd
+            %a{href: '#'} Субсидия
+
     %ul.small-block-grid-3{style: 'list-style: none; margin: 0 0;'}
       - @profile.benefits.each do |benefit|
         %li

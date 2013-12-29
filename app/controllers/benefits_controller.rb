@@ -1,5 +1,6 @@
 class BenefitsController < ApplicationController
   def index
+    @benefits = Benefit.all
   end
 
   def show

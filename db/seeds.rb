@@ -2,16 +2,16 @@ Profile.delete_all
 Benefit.delete_all
 BenefitCategory.delete_all
 
-Profile.create!({title: 'Iнвалiд вiйни'})
-Profile.create!({title: 'Інвалід Великої Вітчизняної війни'})
-Profile.create!({title: 'Інвалід війни з Японією'})
-Profile.create!({title: 'Iнвалiд 1 группи'})
-Profile.create!({title: 'Iнвалiд 2 группи'})
+#Profile.create!({title: 'Iнвалiд вiйни'})
+#Profile.create!({title: 'Інвалід Великої Вітчизняної війни'})
+#Profile.create!({title: 'Інвалід війни з Японією'})
+#Profile.create!({title: 'Iнвалiд 1 группи'})
+#Profile.create!({title: 'Iнвалiд 2 группи'})
 afgan = Profile.create!({title: 'Учасник бойових дiй'})
-Profile.create!({title: 'Учасник вiйни'})
-Profile.create!({title: 'Чорнобилец 1 категории'})
+#Profile.create!({title: 'Учасник вiйни'})
+#Profile.create!({title: 'Чорнобилец 1 категории'})
 
-compensation =BenefitCategory.create!({title: 'компенсация'})
+compensation = BenefitCategory.create!({title: 'компенсация'})
 lgota = BenefitCategory.create!({title: 'льгота'})
 skidka = BenefitCategory.create!({title: 'скидка'})
 social = BenefitCategory.create!({title: 'социальная помощь'})
