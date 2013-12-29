@@ -18,6 +18,6 @@ class BenefitsController < ApplicationController
   end
 
   def new
-
+    @benefit = Benefit.new
   end
 end

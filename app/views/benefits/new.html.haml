@@ -1,6 +1,13 @@
-.row
-  .large-12.columns
-    %div{style: 'padding: 16px 0px;'}
-      = link_to "&larr; вернуться к списку помощей".html_safe, benefits_path
-    %h2 Создание новой помощи
-    %p создайте новую помощь заполнив необходимые поля
+.new-benefit
+  .row
+    .large-12.columns
+      %div{style: 'padding: 16px 0px;'}
+        = link_to "&larr; вернуться к списку помощей".html_safe, benefits_path
+      %h3 Создание новой помощи
+      %p создайте новый профиль заполнив необходимые поля
+      .row
+        .large-8.columns
+          = simple_form_for @benefit do |f|
+            = f.input :title, label: 'Название'
+            = f.input :description, label: "Описание"
+            = f.button :submit, 'Создать'
