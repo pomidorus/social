@@ -1,0 +1,10 @@
+.row
+  .large-12.columns
+    %h1= @profile.title
+    %ul.small-block-grid-3{style: 'list-style: none; margin: 0 0;'}
+      - @profile.benefits.each do |benefit|
+        %li
+          = link_to benefit_path(benefit) do
+            %div
+              %span= benefit.benefit_category.title
+            %h4= benefit.title
