@@ -1,2 +1,8 @@
-%h1 Profiles#create
-%p Find me in app/views/profiles/create.html.haml
+.create-profile
+  .row
+    .large-12.columns
+      %div{style: 'padding: 16px 0px;'}
+        = link_to "&larr; вернуться к списку профилей".html_safe, profiles_path
+      %h2= "Профиль #{link_to @profile.title, profile_path(@profile)} успешно создан".html_safe
+      %p{style: 'margin-top: 20px;'}
+        = link_to 'создать новый профиль', new_profile_path

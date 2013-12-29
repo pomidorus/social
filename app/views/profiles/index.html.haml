@@ -1,20 +1,14 @@
 .row
-  .large12.columns
+  .large-12.columns{style: 'padding: 19px 0px 0px 0px;'}
     %h2 Профили получателей помощи
-    %p Список профилей получателей помощи. Дргуая полезная информация
+    %p Список профилей получателей помощи. Другая полезная информация
 .row
-  .large12.columns{style: 'margin: 18px 0px;'}
+  .large-12.columns{style: 'margin: 18px 0px; background-color: #eeeeee; padding-top: 18px;'}
     = link_to 'Создать профиль', new_profile_path, class: 'button'
 
 .profiles
   .row
     .large12.columns{style: 'margin: 18px 0px;'}
       %ul{style: 'list-style: none; margin: 0 0;'}
-        %li
-          %h3 Афганець учасник бойових дій
-        %li
-          %h3 Одинока мати
-        %li
-          %h3 Инвалід 2-й категорії
-        %li
-          %h3 Инвалід 1-й категорії
+        - @profiles.each do |profile|
+          = render 'profile_index', profile: profile

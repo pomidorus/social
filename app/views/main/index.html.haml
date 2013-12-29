@@ -13,21 +13,7 @@
                 %div{style: 'padding-top: 7px;'}
                   %a{href: '', style: 'text-decoration: underline;'} весь список
             %ul.inline-list{style: 'font-size: 19px; line-height: 2em;'}
-              %li
-                %a{href: '#'} Iнвалiд вiйни
-              %li
-                %a{href: '#'} Інвалід Великої Вітчизняної війни
-              %li
-                %a{href: '#'} Інвалід війни з Японією
-              %li
-                %a{href: '#'} Учасник бойових дiй
-              %li
-                %a{href: '#'} Учасник вiйни
-              %li
-                %a{href: '#'} Iнвалiд 1 группи
-              %li
-                %a{href: '#'} Iнвалiд 2 группи
-              %li
-                %a{href: '#'} Чорнобилец 1 категории
+              - @profiles.each do |profile|
+                = render profile
             %p Мне интересны льготы и субсидии в Киеве
             .button Найти
